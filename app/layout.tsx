@@ -5,6 +5,8 @@ import { GeistMono } from "geist/font/mono"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+
+
 export const metadata: Metadata = {
   title: "Frontend Developer - Portfolio va Xizmatlar",
   description:
@@ -14,16 +16,17 @@ export const metadata: Metadata = {
     title: "Frontend Developer - Portfolio va Xizmatlar",
     description:
       "Professional frontend dasturlash xizmatlari - Portfolio saytlari, Landing page va ma'lumot beruvchi saytlar",
-    url: "https://portfoliogoose.netlify.app/",
+    url: "https://portfoliogoose.netlify.app",
     siteName: "PortfolioGoose",
     images: [
       {
-        url: "https://portfoliogoose.netlify.app/og-image.jpg",
+        url: "https://portfoliogoose.netlify.app/portfolioimg.jpg", // sayt uchun preview rasmi
         width: 1200,
         height: 630,
-        alt: "PortfolioGoose Frontend Developer"
+        alt: "PortfolioGoose - Frontend Developer"
       }
     ],
+    locale: "uz_UZ",
     type: "website",
   },
   twitter: {
@@ -31,9 +34,10 @@ export const metadata: Metadata = {
     title: "Frontend Developer - Portfolio va Xizmatlar",
     description:
       "Professional frontend dasturlash xizmatlari - Portfolio saytlari, Landing page va ma'lumot beruvchi saytlar",
-    images: ["https://portfoliogoose.netlify.app/og-image.jpg"],
+    images: ["https://portfoliogoose.netlify.app/portfolioimg.jpg"], // rasm
   },
 }
+
 
 export default function RootLayout({
   children,
