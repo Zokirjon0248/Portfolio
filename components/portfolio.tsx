@@ -27,7 +27,7 @@ export function Portfolio() {
       title: "Arxitektura Portfolio (Real Project)",
       description: "Zamonaviy va estetik arxitektura loyihalarini namoyish etadigan portfolio. Dizayn va loyiha tafsilotlarini vizual tarzda ko‘rsatadi.",
       image: "/arx-dexium.jpg", 
-      link: "https://arx-portfolio.netlify.app/", 
+      link: "https://arx-dexium.netlify.app/", 
       instagram: "https://www.instagram.com/arx_dexium/?utm_source=ig_web_button_share_sheet", 
       tech: ["Figma", "Adobe Photoshop", "Adobe Illustrator"], 
       price: "200,000 so'm",
