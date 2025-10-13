@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Frontend Developer - Portfolio va Xizmatlar",
   description:
     "Professional frontend dasturlash xizmatlari - Portfolio saytlari, Landing page va ma'lumot beruvchi saytlar",
-  generator: "v0.app",
+  generator: "Mini site studio",
 }
 
 export default function RootLayout({
