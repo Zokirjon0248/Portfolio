@@ -10,10 +10,10 @@ import { Mail, Phone, MapPin, Send, Clock, CheckCircle, MessageCircle } from "lu
 
 // Telefon validatsiyasi funksiyasi
 function validatePhoneNumber(phone: string): boolean {
-  const cleaned = phone.replace(/\s+/g, "") 
-  const pattern1 = /^\+998\d{9}$/      
-  const pattern2 = /^9\d{8}$/           
-  const pattern3 = /^\(?9\d\)?\d{2}\d{2}\d{2}$/ 
+  const cleaned = phone.replace(/\s+/g, "")
+  const pattern1 = /^\+998\d{9}$/
+  const pattern2 = /^9\d{8}$/
+  const pattern3 = /^\(?9\d\)?\d{2}\d{2}\d{2}$/
   return pattern1.test(cleaned) || pattern2.test(cleaned) || pattern3.test(cleaned)
 }
 
@@ -104,7 +104,7 @@ export function Contact() {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className={`text-center mb-12 ${isVisible ? "animate-fade-in-up" : ""}`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-            Keling <span className="gradient-text">Bog'lanaylik</span>
+             <span className="gradient-text">Bog'lanish</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
             Loyihangizni muhokama qilish uchun bog'laning. Bepul maslahat va taklif olishingiz mumkin
@@ -136,7 +136,7 @@ export function Contact() {
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    
+
                     <p className="font-medium group-hover:text-primary transition-colors duration-300 flex items-center gap-2">Telefon  <FaRegSmileWink /></p>
                     <p className="text-muted-foreground">
                       <a
@@ -144,10 +144,10 @@ export function Contact() {
                         aria-label="Telefonga qo'ng'iroq qilish"
                         className="hover:text-primary transition-colors"
                       >
-                        
+
                         {formData.phone || "+998 91 010 62 37"}
                       </a>
-                     
+
                     </p>
                   </div>
                 </div>
@@ -170,9 +170,11 @@ export function Contact() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Send className="h-5 w-5 text-primary" />
-                Loyiha haqida gapirishaylik
+                Loyihangiz haqida gaplashaylik
               </CardTitle>
-              <CardDescription>Formani to'ldiring va men siz bilan bog'lanaman</CardDescription>
+              <CardDescription>
+                Formani to‘ldiring va biz siz bilan tez orada bog‘lanamiz
+              </CardDescription>
             </CardHeader>
             <CardContent>
               <form onSubmit={handleSubmit} className="space-y-4">

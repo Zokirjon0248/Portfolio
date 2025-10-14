@@ -64,11 +64,11 @@ export function Services() {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className={`text-center mb-12 ${isVisible ? "animate-fade-in-up" : ""}`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-            Mening <span className="gradient-text">Xizmatlarim</span>
+            Biznig <span className="gradient-text">Xizmatlarim</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-Sizga foydasi tegadigan oddiy landing pagelar, ma’lumot saytlari yoki kichik biznesingiz uchun online sahifa yaratib beraman.
-Shu orqali men tajriba to‘playman, siz esa o‘zingizning ehtiyojingizga mos professional yechimga ega bo‘lasiz
+            Sizga foydasi tegadigan  landing pagelar, ma’lumot saytlari yoki kichik biznesingiz uchun online sahifa yaratib beramamiz.
+            Shu orqali biz tajriba to‘playmiz, siz esa o‘zingizning ehtiyojingizga mos professional yechimga ega bo‘lasiz
           </p>
         </div>
 

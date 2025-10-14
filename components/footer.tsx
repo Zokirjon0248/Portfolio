@@ -17,7 +17,7 @@ export function Footer() {
             <div className="flex space-x-4">
               {/* Instagram */}
               <a
-                href="https://instagram.com/infosayt.uz"
+                href="https://www.instagram.com/mini.site.studio?igsh=MXp6dW10eHE4M2gy"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-primary transition-colors"

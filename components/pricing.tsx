@@ -28,45 +28,35 @@ export function Pricing() {
 const plans = [
   {
     name: "Oddiy Portfolio",
-    price: "200.000",
-    description: "O'zini tanishtirish yoki shaxsiy portfolio uchun",
+    price: "300.000",
+    description: "Shaxsiy portfolio yoki ijodkorlar uchun mos sayt",
     icon: Star,
     features: [
       "1 sahifali sayt",
+      "Rasm/mahsulot galereyasi",
+      "Google xarita qo‘shish",
+      "Ijtimoiy tarmoqlar havolalari",
       "Telefon va kompyuterga mos dizayn",
-      "Kontakt bo‘limi ",
-      "Oddiy SEO sozlamalar",
+      "Kontakt bo‘limi",
     ],
     popular: false,
     gradient: "from-blue-500/20 to-purple-500/20",
   },
   {
     name: "Vizitka Sayt",
-    price: "300.000",
-    description: "Kichik biznes yoki xizmat ko‘rsatuvchilar uchun",
+    price: "500.000",
+    description: "Kichik biznes yoki xizmat ko‘rsatuvchi jamoalar uchun",
     icon: Zap,
     features: [
-      "2-3 sahifali sayt (asosiy, xizmatlar, aloqa)",
+      "1-4 sahifali sayt (asosiy, xizmatlar, portfolio, aloqa)",
       "Rasm/mahsulot galereyasi",
       "Google xarita qo‘shish",
       "Ijtimoiy tarmoqlar havolalari",
+      "Telefon va kompyuterga mos dizayn",
+      "Kontakt bo‘limi",
     ],
     popular: true,
     gradient: "from-purple-500/20 to-pink-500/20",
-  },
-  {
-    name: "Katalog Sayt",
-    price: "400.000",
-    description: "Mahsulot yoki xizmatlarni ko‘rsatish uchun",
-    icon: Crown,
-    features: [
-      "3-4 sahifali sayt",
-      "Rasm/mahsulot galereyasi",
-      "Aloqa forma",
-      "Oddiy animatsiyalar",
-    ],
-    popular: false,
-    gradient: "from-green-500/20 to-blue-500/20",
   },
 ]
 
@@ -99,73 +89,80 @@ const plans = [
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {plans.map((plan, index) => (
-            <Card
-              key={index}
-              className={`group relative hover-lift glass-effect border-border/50 transition-all duration-500 cursor-pointer overflow-hidden ${
-                plan.popular ? "border-primary/50 scale-105" : "hover:border-primary/50"
-              } ${isVisible ? "animate-scale-in" : ""}`}
-              style={{ animationDelay: `${index * 0.1}s` }}
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-            >
-              {plan.popular && (
-                <div className="absolute top-0 left-1/4 transform -translate-x-1/2 z-20">
-                  <div className="gradient-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1 shadow-lg">
-                    <Star className="h-3 w-3" />
-                    Mashhur
-                  </div>
-                </div>
-              )}
+    <div className="flex flex-col items-center justify-center w-full">
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl w-full">
+    {plans.map((plan, index) => (
+      <Card
+        key={index}
+        className={`group relative hover-lift glass-effect border-border/50 transition-all duration-700 cursor-pointer overflow-hidden
+          ${plan.popular ? "border-primary/50 scale-105 shadow-xl" : "hover:border-primary/50"}
+          ${isVisible ? "animate-scale-in" : ""}`}
+        style={{ animationDelay: `${index * 0.15}s` }}
+        onMouseEnter={() => setHoveredIndex(index)}
+        onMouseLeave={() => setHoveredIndex(null)}
+      >
+        {/* Mashhur belgisi */}
+        {plan.popular && (
+          <div className="absolute top-3 left-1/2 transform -translate-x-1/2 z-20">
+            <div className="gradient-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium flex items-center gap-1 shadow-md">
+              <Star className="h-3 w-3" />
+              Mashhur
+            </div>
+          </div>
+        )}
 
-              <div className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}
-              />
+        {/* Hover gradient effekti */}
+        <div
+          className={`absolute inset-0 bg-gradient-to-br ${plan.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-700`}
+        />
 
-              <CardHeader className="text-center pb-4 relative z-10">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-primary/10 p-3 rounded-full group-hover:bg-primary/20 transition-colors duration-300">
-                    <plan.icon className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-                  </div>
-                </div>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">
-                  {plan.name}
-                </CardTitle>
-                <div className="mt-4">
-                  <span className="text-3xl font-bold gradient-text">{plan.price}</span>
-                  <span className="text-muted-foreground ml-1">so'm</span>
-                </div>
-                <CardDescription className="mt-2 text-sm">{plan.description}</CardDescription>
-              </CardHeader>
+        {/* Sarlavha */}
+        <CardHeader className="text-center pb-4 relative z-10">
+          <div className="flex justify-center mb-4">
+            <div className="bg-primary/10 p-4 rounded-full group-hover:bg-primary/20 transition-colors duration-500">
+              <plan.icon className="h-7 w-7 text-primary group-hover:scale-110 transition-transform duration-500" />
+            </div>
+          </div>
+          <CardTitle className="text-xl font-semibold group-hover:text-primary transition-colors duration-500">
+            {plan.name}
+          </CardTitle>
+          <div className="mt-4">
+            <span className="text-3xl font-bold gradient-text">{plan.price}</span>
+            <span className="text-muted-foreground ml-1">so'm</span>
+          </div>
+          <CardDescription className="mt-2 text-sm">{plan.description}</CardDescription>
+        </CardHeader>
 
-              <CardContent className="space-y-4 relative z-10">
-                <ul className="space-y-3">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li
-                      key={featureIndex}
-                      className="flex items-start text-sm group-hover:text-foreground transition-colors duration-300"
-                    >
-                      <Check className="h-4 w-4 text-primary mr-3 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
+        {/* Tarkib */}
+        <CardContent className="space-y-4 relative z-10">
+          <ul className="space-y-3">
+            {plan.features.map((feature, featureIndex) => (
+              <li
+                key={featureIndex}
+                className="flex items-start text-sm group-hover:text-foreground transition-colors duration-500"
+              >
+                <Check className="h-4 w-4 text-primary mr-3 mt-0.5 flex-shrink-0 group-hover:scale-110 transition-transform duration-500" />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
 
-                <Button
-                  className={`w-full mt-6 group/btn transition-all duration-300 ${
-                    plan.popular
-                      ? "gradient-primary hover:shadow-lg hover:shadow-primary/25"
-                      : "glass-effect hover:bg-primary hover:text-primary-foreground"
-                  }`}
-                  onClick={scrollToContact}
-                >
-                  Tanlash
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+          <Button
+            className={`w-full mt-6 group/btn transition-all duration-500 ${
+              plan.popular
+                ? "gradient-primary hover:shadow-lg hover:shadow-primary/30"
+                : "glass-effect hover:bg-primary hover:text-primary-foreground"
+            }`}
+            onClick={scrollToContact}
+          >
+            Tanlash
+            <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform duration-300" />
+          </Button>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</div>
 
         <div
           className={`mt-12 text-center ${isVisible ? "animate-fade-in-up" : ""}`}

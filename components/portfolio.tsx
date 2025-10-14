@@ -62,10 +62,10 @@ export function Portfolio() {
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className={`text-center mb-12 ${isVisible ? "animate-fade-in-up" : ""}`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-balance">
-            Mening <span className="gradient-text">Portfolio</span>
+            Bizning <span className="gradient-text">Portfolio</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-            Mening yaratgan saytlarim va loyihalarim. Har biri o'ziga xos dizayn va funksionallik bilan
+            Bizning yaratgan saytlarimiz va loyihalarimiz. Har biri o'ziga xos dizayn va funksionallik bilan
           </p>
         </div>
 

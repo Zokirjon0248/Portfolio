@@ -20,6 +20,7 @@ export function Hero() {
 
   return (
     <section className="relative pt-24 pb-16 px-4 overflow-hidden">
+      {/* Orqa fon effektlari */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/20 rounded-full blur-3xl animate-float"></div>
         <div
@@ -32,30 +33,36 @@ export function Hero() {
         ></div>
       </div>
 
+      {/* Asosiy kontent */}
       <div className="container mx-auto max-w-6xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className={`space-y-8 ${isVisible ? "animate-slide-in-left" : ""}`}>
+          {/* Chap tomon (matn qismi) */}
+          <div className={`space-y-8 text-center lg:text-left ${isVisible ? "animate-slide-in-left" : ""}`}>
             <div className="space-y-4">
-              <div className="flex items-center gap-2 mb-4">
+              <div className="flex items-center justify-center lg:justify-start gap-2 mb-4">
                 <Sparkles className="h-6 w-6 text-primary animate-pulse" />
-                <span className="text-primary font-medium">Junior Frontend Developer</span>
+                <span className="text-primary font-medium">Freelancerlar jamoasi</span>
               </div>
-              <h1 className="text-4xl md:text-6xl font-bold text-balance leading-tight">
+
+              <h1 className="text-4xl md:text-6xl font-bold leading-none">
                 Arzon narxda <span className="gradient-text">zamonaviy</span> web saytlar
               </h1>
-              <p className="text-xl text-muted-foreground text-pretty leading-relaxed">
-                Men junior dasturchiman. Tajribamni oshirish uchun ko‘proq loyihalar qilishni xohlayman. Portfolioim hozircha bo‘sh, lekin bu siz uchun imkoniyat:
-                men arzon narxlarda, lekin sifatli va foydali saytlar yasab beraman.
+
+              <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                Biz — yosh freelancerlar jamoasimiz. Portfolio va shaxsiy saytlar yaratishda
+                tajriba orttirish bilan birga mijozlarimizga foydali, sifatli va byudjetga mos
+                saytlar tayyorlaymiz. Har bir loyiha biz uchun muhim — bizda samimiyat va sifat birinchi o‘rinda.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            {/* Tugmalar */}
+            <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
               <Button
                 size="lg"
                 onClick={() => scrollToSection("portfolio")}
                 className="group gradient-primary hover:shadow-lg hover:shadow-primary/25 transition-all duration-300 glow-effect"
               >
-                Ishlarimni ko‘rish
+                Ishlarimizni ko‘rish
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
@@ -68,11 +75,12 @@ export function Hero() {
               </Button>
             </div>
 
+            {/* Statistikalar */}
             <div className="grid grid-cols-3 gap-8 pt-8">
               {[
                 { number: "1+", label: "Tugallangan loyiha" },
                 { number: "100%", label: "Mijozlar mamnuniyati" },
-                { number: "Arzon", label: "Qulay narxlar" },
+                { number: "Byudjetga", label: "Mos narxlar" },
               ].map((stat, index) => (
                 <div
                   key={index}
@@ -86,6 +94,7 @@ export function Hero() {
             </div>
           </div>
 
+          {/* O‘ng tomon (ikonkalar qismi) */}
           <div className={`relative ${isVisible ? "animate-slide-in-right" : ""}`}>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
@@ -93,7 +102,7 @@ export function Hero() {
                   <Code className="h-8 w-8 text-primary mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300" />
                   <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">Toza Kod</h3>
                   <p className="text-sm text-muted-foreground">
-                    Zamonaviy standartlarga mos, tushunarli va oddiy kod yozaman
+                    Jamoamiz kodlarni zamonaviy standartlarga mos, tushunarli va optimallashtirilgan holatda yozadi.
                   </p>
                 </div>
                 <div
@@ -103,19 +112,18 @@ export function Hero() {
                   <Zap className="h-8 w-8 text-primary mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300" />
                   <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">Tez Yuklash</h3>
                   <p className="text-sm text-muted-foreground">
-                    Saytlar tez va qulay ishlashi uchun optimallashtirish qilaman
+                    Saytlar tez ishlashi va foydalanuvchi tajribasi yuqori bo‘lishiga alohida e’tibor beramiz.
                   </p>
                 </div>
               </div>
               <div className="space-y-4 pt-8">
-                <div
-                  className="glass-effect rounded-xl p-6 hover-lift group cursor-pointer"
+                <div className="glass-effect rounded-xl p-6 hover-lift group cursor-pointer"
                   style={{ animationDelay: "0.4s" }}
                 >
                   <Palette className="h-8 w-8 text-primary mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300" />
                   <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">Oddiy & Chiroyli Dizayn</h3>
                   <p className="text-sm text-muted-foreground">
-                    Zamonaviy va minimal dizayn bilan foydalanuvchi uchun qulay saytlar
+                    Minimalizm va zamonaviy dizayn uslubi bilan foydalanuvchilar uchun qulay interfeyslar yaratamiz.
                   </p>
                 </div>
               </div>
