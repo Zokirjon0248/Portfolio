@@ -10,24 +10,7 @@ export const metadata: Metadata = {
   title: "Mini Site Studio – Shaxsiy saytlar va portfolio yaratish xizmati",
   description:
     "Mini Site Studio – shaxslar va ijodkorlar uchun portfolio va shaxsiy saytlarni byudjetga mos holatda tayyorlab beruvchi freelancerlar jamoasi.",
-  generator: "Mini Site Studio",
-  keywords: [
-    "portfolio sayt",
-    "shaxsiy sayt",
-    "freelancer jamoasi",
-    "mini site studio",
-    "byudjetga mos sayt",
-    "ijodkorlar uchun sayt",
-    "portfolio yaratish",
-  ],
-  openGraph: {
-    title: "Mini Site Studio – Shaxsiy saytlar va portfolio yaratish xizmati",
-    description:
-      "Mini Site Studio – shaxslar va ijodkorlar uchun portfolio va shaxsiy saytlarni byudjetga mos holatda tayyorlab beruvchi freelancerlar jamoasi.",
-    url: "https://minisitestudio.uz",
-    siteName: "Mini Site Studio",
-    type: "website",
-  },
+  generator: "Mini site studio",
 }
 
 export default function RootLayout({
@@ -37,9 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="uz">
-      <body
-        className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}
-      >
+      <body className={`font-sans ${GeistSans.variable} ${GeistMono.variable} antialiased`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>
